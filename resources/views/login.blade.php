@@ -3,30 +3,32 @@
 
 @extends('include.master')
 
+
+
 @section('content')
+
+
+@include('include.master')
 
 @include('include.validation')
 
-@if($errors->any())
+<h1>login</h1>
 
-  @foreach($errors->all() as $error)
+@section('content')
 
-    {{$error}}
-  @endforeach
 
-@endif  
-<form action="{{route('createuser')}}" method='post'>
+
+<form action="{{route('signin')}}" method='post'>
   @csrf
-  <input type="text" name="name" placeholder='first name' value="{{old('name')}}" ><br>
+  
   <input type="text"  name="email" placeholder='email' value="{{old('email')}}"><br>
   <input type="text" name="password" placeholder='password' value="{{old('password')}}"><br>
 
 
   <input type="submit" value="Submit">
 </form>
-<h1>Break</h1>
-
-
 
 @endsection()
+
+
 

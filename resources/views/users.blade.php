@@ -13,6 +13,7 @@
 
 
      <table style='text-align:left;width:800px'>
+     <td>{{$user}}</td> 
 
 
          <thead>
@@ -24,17 +25,7 @@
            </tr>
 
          </thead>    
-         <tbody>
-         @foreach($user as $user)
-        <tr>
-           <td>{{$user->name}}</td>
-           <td>{{$user->email}}</td>
-           <td>{{$user->password}}</td>
-
-        </tr>
-        @endforeach
-
-         </tbody> 
+       
      </table> 
 
     
